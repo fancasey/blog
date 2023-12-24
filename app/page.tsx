@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import Preview from './ui/preview'
+import { getSortedPostsData } from '@/lib/posts'
+
+const posts = getSortedPostsData()
 
 export default function Home() {
   return (
@@ -9,11 +12,10 @@ export default function Home() {
       </div>
       <div className="flex justify-center my-10">
         <div className="space-y-5">
-          {['how i met your mother', 'my favorite blog',
-            'this is the best feeling ever'].map(title =>
-              <li key={title} className="list-none">
-                <Preview title={title} brief="who knows" date={new Date()} />
-                </li>)}
+          {posts.map(post =>
+            <li key={post.id} className="list-none">
+              <Preview id={post.id} title={post.data.title} brief={post.data.brief} date={post.data.date} />
+            </li>)}
         </div>
       </div>
     </main>

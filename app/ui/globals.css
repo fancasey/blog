@@ -7,7 +7,20 @@
   --text-color: rgb(232, 232, 204);
 }
 
-body  {
+body {
   background-color: var(--main-bg-color);
   color: var(--text-color)
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+li {
+  list-style-type: circle;
+  list-style-position: inside;
 }

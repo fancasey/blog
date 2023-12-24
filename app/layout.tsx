@@ -2,6 +2,7 @@ import '@/app/ui/globals.css'
 import type { Metadata } from 'next'
 import { Jost } from 'next/font/google'
 import Navbar from './ui/navbar'
+import Link from 'next/link'
 
 const jost = Jost({ subsets: ['latin'] })
 
@@ -20,7 +21,9 @@ export default function RootLayout({
       <body className={jost.className}>
         <header className="px-5 py-3">
           <div className="flex items-center place-content-between">
-            <h1 className="text-6xl">Casey Fan</h1>
+            <Link href="/">
+              <h1 className="text-6xl">Casey Fan</h1>
+            </Link>
             <Navbar />
           </div>
         </header>
