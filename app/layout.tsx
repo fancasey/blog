@@ -7,8 +7,8 @@ import Link from 'next/link'
 const jost = Jost({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'cheeky lil blog',
-  description: 'a blog',
+  title: "Casey Fan",
+  description: 'A personal/professional blog for me, Casey',
 }
 
 export default function RootLayout({
