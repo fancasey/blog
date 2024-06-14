@@ -18,10 +18,13 @@ export default async function Post({ params }: { params: { id: string } }) {
             <div className="reverse-colors flex justify-center p-5 text-5xl">
                 {postData.data.title}
             </div>
-            <div className="flex flex-col max-w-[900px] lg:mx-40 mx-3 my-10 space-y-8">
-                <p className="font-light">written {new Date(postData.data.date).toDateString()} by me</p>
-                <div className={`${lora.className} space-y-4`} dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
+            <div className="flex justify-center">
+                <div className="flex flex-col max-w-[900px] mx-8 my-10 space-y-8">
+                    <p className="font-light">written {new Date(postData.data.date).toDateString()} by me</p>
+                    <div className={`${lora.className} space-y-4`} dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
+                </div>
             </div>
+
         </div>
     );
 }
