@@ -1,6 +1,6 @@
 ---
 title: 'Freshman Year Done'
-date: '2024-4-30'
+date: 'April 30 2024'
 brief: "I am done! Who would've thought?"
 ---
 Hi. It's been a minute. I haven't really had anything to write about, and I still don't really (maybe except one thing), but I feel like I need to show I didn't just make this blog to make a website.

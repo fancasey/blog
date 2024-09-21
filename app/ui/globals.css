@@ -3,24 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --main-bg-color: rgb(62, 44, 73);
-  --text-color: rgb(232, 232, 204);
+  --foreground-rgb: 255, 228, 51;
+  --background-rgb: 0, 78, 137;
 }
 
 body {
-  background-color: var(--main-bg-color);
-  color: var(--text-color)
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb))
 }
 
 h1 {
   font-size: xx-large;
+  font-weight: bolder;
 }
 
 h2 {
   font-size: x-large;
 }
 
-li {
-  list-style-type: circle;
-  list-style-position: inside;
+.reverse-colors {
+  color: rgb(var(--background-rgb));
+  background: rgb(var(--foreground-rgb))
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

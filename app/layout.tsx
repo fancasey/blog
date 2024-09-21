@@ -1,29 +1,27 @@
-import '@/app/ui/globals.css'
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 import { Jost } from 'next/font/google'
-import Navbar from './ui/navbar'
-import Link from 'next/link'
+import Link from "next/link";
+import Navbar from "./ui/navbar";
+import "./ui/globals.css";
 
-const jost = Jost({ subsets: ['latin'] })
+const jost = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Casey Fan",
-  description: 'A personal/professional blog for me, Casey',
-}
+  description: "my blog",
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body className={jost.className}>
         <header className="px-5 py-3">
-          <div className="flex items-center place-content-between">
-            <Link href="/">
-              <h1 className="text-6xl">Casey Fan</h1>
-            </Link>
+          <div className="flex items-center place-content-between text-6xl">
+            <Link href="/">Casey Fan</Link>
             <Navbar />
           </div>
         </header>
@@ -31,5 +29,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
