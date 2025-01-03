@@ -29,7 +29,7 @@ export default function RootLayout({
         <header className={inconsolata.className}>
           <Link href="/">Casey Fan</Link>
         </header>
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

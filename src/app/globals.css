@@ -29,9 +29,12 @@ header {
 }
 
 h1 {
+  font-size: 5rem;
+  border-bottom: solid thick;
+}
+
+main {
   color: var(--foreground);
   background: var(--background);
-  font-size: 5rem;
-  margin-inline: 15%;
-  border-bottom: solid thick;
+  padding-inline: 15%;
 }
