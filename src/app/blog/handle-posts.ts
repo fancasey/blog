@@ -12,18 +12,31 @@ export function getBlogSlugs() {
 
     // use slug for finding in page.tsx
     const posts = mdx_post_files.map((file) => {
-        return { slug: path.basename(file, ".mdx") }
+        const s: string = path.basename(file, ".mdx")
+
+        return { slug: s }
     })
 
     return posts
 }
 
-export function getBlogPosts() {
-    const slugs = getBlogSlugs()
+export async function getPostData(slug: string) {
+    const { metadata: data } = await import(`@/blog/posts/${slug}.mdx`)
 
-    const posts = slugs.map(async (post) => {
-        const { title } = await import(`@/blog/posts/${post}.mdx`)
-        return title
+    return data
+}
+
+export async function getPostsSorted() {
+    const post_slugs = getBlogSlugs()
+
+    const posts = await Promise.all(
+        post_slugs.map(async (post_slug) => {
+            return { slug: post_slug.slug, metadata: await getPostData(post_slug.slug) }
+        })
+    )
+
+    posts.sort((a, b) => {
+        return b.metadata.date - a.metadata.date
     })
 
     return posts
