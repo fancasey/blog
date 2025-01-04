@@ -13,7 +13,7 @@ export default async function Home() {
       <ul>
         {posts.map(async (post) => {
           return (
-            <li>
+            <li key={post.slug}>
               <Link href={`/blog/${post.slug}`}>
                 <Blurb title={post.metadata.title} brief={post.metadata.brief}/>
               </Link>
