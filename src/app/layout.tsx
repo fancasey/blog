@@ -30,6 +30,7 @@ export default function RootLayout({
           <Link href="/">Casey Fan</Link>
         </header>
         <main>{children}</main>
+        <footer className="my-20"/>
       </body>
     </html>
   );

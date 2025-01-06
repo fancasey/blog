@@ -1,0 +1,21 @@
+import Image from 'next/image'
+
+export const metadata = {
+    title: "update",
+    brief: "I made some changes",
+    date: new Date("1/6/2025")
+}
+
+## Hello again!
+Don't worry guys, I didn't forget about the blog. It's just been a hot minute and I had other things on my mind, but we're back now! And to make up for the lack of blog posts, I've updated the site! It might be a downgrade in some people's eyes, but I think if I explain the changes, you'll appreciate what I've done with this space.
+## Rationale
+I'll be hoenst: when I made the first iteration of this site, a lot of it was just copy and paste from the internet. Do you know how many tutorials there are on how to make a blog with React? Too many to count. Anyway, I found some tutorial that used Next.js, md files, and one js file, and basically word for word copy pasted it in, all while changing some html/css to make it look pretty in my eyes. I learned a lot, but I still had no idea what was REALLY going on (I just looked over the code and convinced myself I knew what was going on, which is not the same). On top of that, my code was really a mess: I didn't have any uniformity/structure, I used tailwind too much, and I was scared I was going to break the whole thing whenever I went to make any change, including just adding a simple blog post. So I've decided I wanted to start from scratch, and really give making this blog an honest try without copying and pasting too much code.
+## Aesthetic changes
+I originally was inspired to make my site like those [penguin classic books](https://www.penguin.com/penguin-classics-overview/), but with a little more color to show that I'm not like everyone else. I still like how it looked, but I think the blue and yellow was a little bit much and I admitted that I was no designer, so I opted for a much simpler aesthetic. Simple light and dark (oh, I also have support for light/dark themes!), pastel colors that are yellow/purple kind of light the day and night cycle, with the sun and the dark night sky. I think the page looks more professional now, but I guess that's up to the individual to see.
+
+<Image className="mx-auto" src="/penguin-classic.jpg" alt="tell-tale heart" width="250" height="250"/>
+
+## Technical changes
+Since I don't really know what was going on before, I can't speak to how things have changed, but now I've chosen what I'm using a little bit more carefully, so I can speak to those technologies better. I think before I was using the page router of Next.js, which is not recommended, so I switched to the app router for this projects. To be honest, I feel like the page router is more intuitive, but I'll still to what's recommended and what is 'up to date' so to speak. I definitely took better advantage of css files (like globals.css) instead of just putting in custom tailwind for everything–this should hopefully make things much more extensible and easier to read for those going through my repo. We're also now transitioned to 100% typescript, which is wonderful, but still many things are typed as any, so it's a process I guess. Going along with that, the logic for getting blog posts, slugs, and sorting blog posts is mostly done by me (assisted by my good friend ChatGPT), and I have a much better understanding of what's going on under the hood now. Also, I've moved onto mdx instead of md, even though I think before I had the mdx package installed (I'm not sure what for). It's really great that I get to use jsx INSIDE my markdown files, and it's also a very cool way to implement frontmatter without installing another package (I learned that from the Next.js website). Also, I don't know if I learned anything, but I'm a little bit less scared to use git now (this has also been helped by my classes, both of which used github classroom).
+<br />
+Yeah, I think that's about it. Anwyway, I hope to be using this blog a bit more to share about things I'm doing (upcoming projects, research) as a way to reinforce what I'm learning: after all, teaching is the best way to learn or something like that!

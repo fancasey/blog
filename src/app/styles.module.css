@@ -1,0 +1,14 @@
+.blog {
+    a {
+        text-decoration: underline;
+    }
+    
+    h2 {
+        margin-top: 1rem;
+    }
+
+    ul {
+        list-style: square;
+        list-style-position: inside;
+    }
+}

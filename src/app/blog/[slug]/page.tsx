@@ -1,3 +1,4 @@
+import styles from "@/styles.module.css"
 import { getBlogSlugs } from "@/blog/handle-posts";
 
 export default async function Page({
@@ -11,8 +12,8 @@ export default async function Page({
   return (
     <div>
       <h1>{data.title}</h1>
-      <h3 className="py-1">{new Date(data.date).toLocaleDateString()}</h3>
-      <div className="py-5 px-2">
+      <h3 className="py-1">{new Date(data.date).toDateString()}</h3>
+      <div className={`px-2 ${styles.blog}`}>
         <Post />
       </div>
     </div>
