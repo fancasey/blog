@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inconsolata } from 'next/font/google'
 import { Spectral } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import NavBar from "./blog/components/nav";
 
 export const metadata: Metadata = {
