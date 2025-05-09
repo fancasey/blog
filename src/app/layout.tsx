@@ -3,6 +3,7 @@ import { Inconsolata } from 'next/font/google'
 import { Spectral } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import NavBar from "./blog/components/nav";
 
 export const metadata: Metadata = {
   title: "Casey Fan",
@@ -27,9 +28,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={spectral.className}>
         <header className={inconsolata.className}>
-          <Link href="/">Casey Fan</Link>
+          <NavBar />
         </header>
-        <main>{children}</main>
+        <main className="px-0 md:px-[15%]">{children}</main>
         <footer className="my-20"/>
       </body>
     </html>

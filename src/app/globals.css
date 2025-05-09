@@ -40,5 +40,4 @@ h2 {
 main {
   color: var(--foreground);
   background: var(--background);
-  padding-inline: 15%;
 }
